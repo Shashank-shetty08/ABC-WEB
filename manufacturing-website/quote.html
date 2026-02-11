@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Quote - ABC Manufacturing Machinery</title>
+  <meta name="description" content="Request a customized quote for industrial machinery from ABC Manufacturing Machinery.">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+  <!-- HEADER, NAVIGATION, MOBILE MENU (Same as other pages) -->
+  
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1>Request a Quote</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Get Quote</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM SECTION -->
+  <section class="quote-form-section">
+    <div class="container">
+      <div class="quote-form-container">
+        <div class="quote-header">
+          <h2>Get a Customized Quote</h2>
+          <p>Fill out the form below and our sales team will provide you with a detailed quotation within 24 hours.</p>
+        </div>
+        
+        <form id="quoteForm" class="quote-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quoteName">Full Name *</label>
+              <input type="text" id="quoteName" required>
+            </div>
+            <div class="form-group">
+              <label for="quoteEmail">Email Address *</label>
+              <input type="email" id="quoteEmail" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quotePhone">Phone Number *</label>
+              <input type="tel" id="quotePhone" required>
+            </div>
+            <div class="form-group">
+              <label for="quoteCompany">Company Name</label>
+              <input type="text" id="quoteCompany">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="quoteCountry">Country *</label>
+            <select id="quoteCountry" required>
+              <option value="">Select Country</option>
+              <option value="India">India</option>
+              <option value="USA">United States</option>
+              <option value="UK">United Kingdom</option>
+              <option value="UAE">UAE</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="quoteMachineType">Machine Type / Category *</label>
+            <select id="quoteMachineType" required>
+              <option value="">Select Machine Type</option>
+              <option value="CNC">CNC Machines</option>
+              <option value="Turning">Turning Machines / Lathes</option>
+              <option value="Milling">Milling Machines</option>
+              <option value="Grinding">Grinding Machines</option>
+              <option value="Cutting">Cutting Machines</option>
+              <option value="Packaging">Packaging Machines</option>
+              <option value="Automation">Automation Systems</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="quoteSpecifications">Machine Specifications / Model (if known)</label>
+            <input type="text" id="quoteSpecifications" placeholder="e.g., VMC-850, 5-axis, capacity, etc.">
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quoteQuantity">Quantity Required *</label>
+              <input type="number" id="quoteQuantity" min="1" required>
+            </div>
+            <div class="form-group">
+              <label for="quoteTimeline">Expected Timeline</label>
+              <select id="quoteTimeline">
+                <option value="Immediate">Immediate</option>
+                <option value="1-2 months">1-2 months</option>
+                <option value="3-6 months">3-6 months</option>
+                <option value="6+ months">6+ months</option>
+                <option value="Just exploring">Just exploring</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="quoteRequirements">Detailed Requirements</label>
+            <textarea id="quoteRequirements" rows="5" placeholder="Please provide details about your specific requirements, technical specifications, desired features, etc."></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="quoteAttachment">Attachments (RFQ, Drawings, etc.)</label>
+            <div class="file-input">
+              <input type="file" id="quoteAttachment" multiple accept=".pdf,.doc,.docx,.xlsx,.jpg,.png">
+              <span class="file-info">Upload technical specifications, drawings, or RFQ documents (Max 20MB)</span>
+            </div>
+          </div>
+          
+          <div class="form-checkbox">
+            <input type="checkbox" id="quoteConsent" required>
+            <label for="quoteConsent">I agree to the <a href="privacy.html">Privacy Policy</a> and consent to being contacted *</label>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn-primary btn-large">
+              <i class="fas fa-file-invoice-dollar"></i> Submit Quote Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US FOR QUOTE -->
+  <section class="why-quote">
+    <div class="container">
+      <div class="quote-benefits">
+        <h3>Why Request a Quote from ABC Machinery?</h3>
+        <div class="benefits-grid">
+          <div class="benefit">
+            <i class="fas fa-clock"></i>
+            <h4>24-Hour Response</h4>
+            <p>We respond to all quote requests within 24 business hours</p>
+          </div>
+          <div class="benefit">
+            <i class="fas fa-file-alt"></i>
+            <h4>Detailed Quotations</h4>
+            <p>Comprehensive quotes with breakd

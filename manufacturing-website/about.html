@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - ABC Manufacturing Machinery</title>
+  <meta name="description" content="Learn about ABC Manufacturing Machinery - 25+ years of excellence in industrial machinery solutions. ISO certified, global presence, and customer-focused approach.">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+  <!-- HEADER SECTION (Same as index.html) -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="logo-area">
+          <a href="index.html" class="logo">
+            <i class="fas fa-industry"></i>
+            <span>ABC Machinery</span>
+          </a>
+        </div>
+        <div class="header-contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <span class="label">24/7 Support</span>
+              <span class="value">+91 98765 43210</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span class="label">Email Us</span>
+              <span class="value">info@abcmachinery.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span class="label">Head Office</span>
+              <span class="value">Mumbai, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="main-nav">
+    <div class="container">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html" class="nav-logo">
+            <i class="fas fa-industry"></i>
+            <span>ABC</span>
+          </a>
+        </div>
+        
+        <div class="nav-links" id="navLinks">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="about.html" class="active"><i class="fas fa-info-circle"></i> About</a>
+          <a href="machines.html"><i class="fas fa-cogs"></i> Machines</a>
+          <a href="services.html"><i class="fas fa-tools"></i> Services</a>
+          <a href="contact.html"><i class="fas fa-address-book"></i> Contact</a>
+          <a href="quote.html" class="nav-cta"><i class="fas fa-file-invoice-dollar"></i> Get Quote</a>
+        </div>
+        
+        <div class="nav-actions">
+          <button class="search-btn" onclick="toggleSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search machines...">
+          <button onclick="searchMachines()">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <h3>Menu</h3>
+      <button onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+      <a href="machines.html"><i class="fas fa-cogs"></i> Machines</a>
+      <a href="services.html"><i class="fas fa-tools"></i> Services</a>
+      <a href="contact.html"><i class="fas fa-address-book"></i> Contact</a>
+      <a href="quote.html" class="mobile-cta"><i class="fas fa-file-invoice-dollar"></i> Get Quote</a>
+    </div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1>About ABC Manufacturing Machinery</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>About Us</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT HERO SECTION -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero-grid">
+        <div class="about-hero-content">
+          <span class="section-subtitle">Our Story</span>
+          <h2>25+ Years of Manufacturing Excellence</h2>
+          <p class="lead">From a small workshop in Mumbai to a global machinery supplier, our journey has been driven by innovation, quality, and customer satisfaction.</p>
+          <p>Founded in 1995 by Mr. Rajesh Verma, ABC Manufacturing Machinery started with just 5 employees and a vision to provide high-quality industrial machinery to Indian manufacturers. Today, we have grown into a multinational organization with 200+ employees, serving over 5000 clients across 50+ countries.</p>
+          <p>Our commitment to quality and continuous innovation has made us a trusted partner for industries ranging from automotive and aerospace to pharmaceuticals and packaging.</p>
+          
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-trophy"></i>
+              <div>
+                <strong>ISO 9001:2015</strong>
+                <span>Certified since 2005</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-globe"></i>
+              <div>
+                <strong>Global Presence</strong>
+                <span>50+ Countries</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-users"></i>
+              <div>
+                <strong>Expert Team</strong>
+                <span>200+ Professionals</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-hero-image">
+          <div class="image-card">
+            <i class="fas fa-industry fa-8x"></i>
+            <div class="established-badge">
+              <span>Est. 1995</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION VISION SECTION -->
+  <section class="mission-vision">
+    <div class="container">
+      <div class="mission-vision-grid">
+        <div class="mission-card">
+          <div class="card-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Our Mission</h3>
+          <p>To empower manufacturers worldwide with reliable, innovative, and cost-effective industrial machinery solutions that enhance productivity and drive growth.</p>
+          <ul class="mission-list">
+            <li><i class="fas fa-check"></i> Deliver superior quality products</li>
+            <li><i class="fas fa-check"></i> Provide exceptional customer service</li>
+            <li><i class="fas fa-check"></i> Foster innovation and continuous improvement</li>
+            <li><i class="fas fa-check"></i> Build long-term partnerships</li>
+          </ul>
+        </div>
+        
+        <div class="vision-card">
+          <div class="card-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Our Vision</h3>
+          <p>To be the world's most trusted partner for industrial machinery solutions, recognized for excellence, innovation, and customer-centric approach.</p>
+          <ul class="vision-list">
+            <li><i class="fas fa-check"></i> Global leader in industrial machinery</li>
+            <li><i class="fas fa-check"></i> Pioneer in smart manufacturing</li>
+            <li><i class="fas fa-check"></i> Sustainable and responsible business</li>
+            <li><i class="fas fa-check"></i> Employer of choice in engineering</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE SECTION -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Our Journey</span>
+        <h2 class="section-title">Milestones & Achievements</h2>
+        <p class="section-description">Key moments that shaped our company's growth</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1995</div>
+          <div class="timeline-content">
+            <h3>Company Founded</h3>
+            <p>ABC Manufacturing Machinery established in Mumbai with 5 employees, starting with basic lathe machines.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2005</div>
+          <div class="timeline-content">
+            <h3>ISO 9001 Certification</h3>
+            <p>Achieved ISO 9001:2005 certification, establishing robust quality management systems.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2010</div>
+          <div class="timeline-content">
+            <h3>International Expansion</h3>
+            <p>Began exporting to Middle East and Southeast Asia. First overseas office opened in Dubai.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2015</div>
+          <div class="timeline-content">
+            <h3>New Manufacturing Facility</h3>
+            <p>State-of-the-art manufacturing plant inaugurated in Pune with 50,000 sq. ft. production area.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2018</div>
+          <div class="timeline-content">
+            <h3>Product Range Expansion</h3>
+            <p>Launched advanced CNC machines and automation solutions. Crossed 3000 client milestone.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2021</div>
+          <div class="timeline-content">
+            <h3>Digital Transformation</h3>
+            <p>Launched e-commerce platform and virtual factory tours. Reached 4500+ clients.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">
+            <h3>Present Day</h3>
+            <p>Serving 5000+ clients across 50+ countries with 200+ employees and 50+ machine models.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP TEAM -->
+  <section class="leadership-team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Leadership</span>
+        <h2 class="section-title">Meet Our Team</h2>
+        <p class="section-description">Experienced professionals driving our success</p>
+      </div>
+      
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-image">
+            <i class="fas fa-user-circle fa-5x"></i>
+          </div>
+          <div class="team-info">
+            <h3>Rajesh Verma</h3>
+            <p class="position">Founder & CEO</p>
+            <p class="experience">30+ years in industrial machinery</p>
+            <p class="bio">Pioneer in Indian manufacturing sector, instrumental in bringing advanced CNC technology to India.</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-card">
+          <div class="team-image">
+            <i class="fas fa-user-circle fa-5x"></i>
+          </div>
+          <div class="team-info">
+            <h3>Anil Sharma</h3>
+            <p class="position">Chief Technical Officer</p>
+            <p class="experience">25+ years in engineering</p>
+            <p class="bio">Expert in machine design and automation. Holds 12 patents in industrial machinery.</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-card">
+          <div class="team-image">
+            <i class="fas fa-user-circle fa-5x"></i>
+          </div>
+          <div class="team-info">
+            <h3>Priya Patel</h3>
+            <p class="position">Head of Operations</p>
+            <p class="experience">20+ years in manufacturing</p>
+            <p class="bio">Lean manufacturing specialist who streamlined production processes and reduced lead times by 40%.</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="team-card">
+          <div class="team-image">
+            <i class="fas fa-user-circle fa-5x"></i>
+          </div>
+          <div class="team-info">
+            <h3>Vikram Singh</h3>
+            <p class="position">VP - International Sales</p>
+            <p class="experience">18+ years in global trade</p>
+            <p class="bio">Expanded company presence to 50+ countries with strategic partnerships.</p>
+            <div class="team-social">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Certifications</span>
+        <h2 class="section-title">Quality & Compliance</h2>
+        <p class="section-description">Our commitment to international standards</p>
+      </div>
+      
+      <div class="certifications-grid">
+        <div class="cert-card">
+          <i class="fas fa-certificate fa-3x"></i>
+          <h3>ISO 9001:2015</h3>
+          <p>Quality Management System</p>
+        </div>
+        
+        <div class="cert-card">
+          <i class="fas fa-certificate fa-3x"></i>
+          <h3>CE Certified</h3>
+          <p>European Conformity</p>
+        </div>
+        
+        <div class="cert-card">
+          <i class="fas fa-certificate fa-3x"></i>
+          <h3>Make in India</h3>
+          <p>Government Recognized</p>
+        </div>
+        
+        <div class="cert-card">
+          <i class="fas fa-certificate fa-3x"></i>
+          <h3>MSME Registered</h3>
+          <p>Ministry of MSME, Govt. of India</p>
+        </div>
+        
+        <div class="cert-card">
+          <i class="fas fa-certificate fa-3x"></i>
+          <h3>OHSAS 18001</h3>
+          <p>Occupational Health & Safety</p>
+        </div>
+        
+        <div class="cert-card">
+          <i class="fas fa-certificate fa-3x"></i>
+          <h3>ISO 14001</h3>
+          <p>Environmental Management</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS COUNTER -->
+  <section class="stats-counter">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <i class="fas fa-calendar-alt"></i>
+          <span class="stat-number">25+</span>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-users"></i>
+          <span class="stat-number">5000+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-globe"></i>
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Countries Served</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-cogs"></i>
+          <span class="stat-number">200+</span>
+          <span class="stat-label">Machines Installed</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-tools"></i>
+          <span class="stat-number">1000+</span>
+          <span class="stat-label">Service Calls/Year</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-award"></i>
+          <span class="stat-number">12</span>
+          <span class="stat-label">Industry Awards</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Partner with Industry Leaders</h2>
+        <p>Join 5000+ satisfied customers who trust ABC Machinery for their manufacturing needs</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-large">
+            <i class="fas fa-handshake"></i> Get in Touch
+          </a>
+          <a href="machines.html" class="btn btn-outline-light btn-large">
+            <i class="fas fa-cogs"></i> Explore Products
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (Same as index.html) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <i class="fas fa-industry"></i>
+            <span>ABC Machinery</span>
+          </div>
+          <p>Premium industrial machinery solutions since 1995. ISO 9001:2015 certified, serving 5000+ clients across 50+ countries.</p>
+          <div class="certification-badges">
+            <span class="badge">ISO 9001:2015</span>
+            <span class="badge">CE Certified</span>
+            <span class="badge">Make in India</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="machines.html"><i class="fas fa-chevron-right"></i> Machinery</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Machinery</h4>
+          <ul>
+            <li><a href="machines.html?category=cnc"><i class="fas fa-chevron-right"></i> CNC Machines</a></li>
+            <li><a href="machines.html?category=turning"><i class="fas fa-chevron-right"></i> Turning Machines</a></li>
+            <li><a href="machines.html?category=milling"><i class="fas fa-chevron-right"></i> Milling Machines</a></li>
+            <li><a href="machines.html?category=grinding"><i class="fas fa-chevron-right"></i> Grinding Machines</a></li>
+            <li><a href="machines.html?category=packaging"><i class="fas fa-chevron-right"></i> Packaging Machines</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Industrial Area Phase II, Andheri East, Mumbai - 400072, India</li>
+            <li><i class="fas fa-phone-alt"></i> Sales: +91 98765 43210</li>
+            <li><i class="fas fa-phone-alt"></i> Support: +91 98765 43211</li>
+            <li><i class="fas fa-envelope"></i> info@abcmachinery.com</li>
+          </ul>
+          
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>&copy; 2024 ABC Manufacturing Machinery Pvt. Ltd. All Rights Reserved.</p>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
+</body>
+</html>

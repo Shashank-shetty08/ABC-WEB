@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Manufacturing Machinery - Industrial Equipment Solutions</title>
+  <meta name="description" content="Premium industrial machinery including CNC machines, lathes, milling machines, and automated solutions">
+  <meta name="keywords" content="industrial machinery, CNC machines, manufacturing equipment, lathe machines">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <div class="header-top">
+        <h1>ABC Manufacturing Machinery</h1>
+        <div class="header-contact">
+          <span><i class="fas fa-phone-alt"></i> +91 98765 43210</span>
+          <span><i class="fas fa-envelope"></i> info@abcmachinery.com</span>
+        </div>
+      </div>
+      <p class="header-tagline">Industrial Machinery Information & Solutions</p>
+      <div class="header-stats">
+        <span><i class="fas fa-cogs"></i> <span id="machineCount">24</span> Machines Available</span>
+        <span><i class="fas fa-headset"></i> 24/7 Technical Support</span>
+        <span><i class="fas fa-globe"></i> Worldwide Shipping</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="fas fa-industry"></i>
+        <span>ABC Machinery</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+        <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="machines.html"><i class="fas fa-cogs"></i> Machines</a>
+        <a href="services.html"><i class="fas fa-tools"></i> Services</a>
+        <a href="contact.html"><i class="fas fa-address-book"></i> Contact</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMobileMenu()"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html" onclick="closeMobileMenu()"><i class="fas fa-info-circle"></i> About</a>
+    <a href="machines.html" onclick="closeMobileMenu()"><i class="fas fa-cogs"></i> Machines</a>
+    <a href="services.html" onclick="closeMobileMenu()"><i class="fas fa-tools"></i> Services</a>
+    <a href="contact.html" onclick="closeMobileMenu()"><i class="fas fa-address-book"></i> Contact</a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>Premium Industrial Machinery Solutions</h2>
+      <p class="hero-subtitle">Providing cutting-edge manufacturing equipment since 1995</p>
+      <div class="hero-features">
+        <span><i class="fas fa-check-circle"></i> ISO 9001:2015 Certified</span>
+        <span><i class="fas fa-check-circle"></i> 2 Years Warranty</span>
+        <span><i class="fas fa-check-circle"></i> Free Installation</span>
+      </div>
+      <div class="hero-buttons">
+        <a href="machines.html" class="btn-primary"><i class="fas fa-cogs"></i> View Machines Catalog</a>
+        <a href="contact.html" class="btn-secondary"><i class="fas fa-file-invoice-dollar"></i> Get Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED MACHINES -->
+  <section class="featured-machines section-card">
+    <h2 class="section-title">Featured Machines</h2>
+    <div class="machines-grid" id="featuredMachines">
+      <!-- Featured machines loaded via JS -->
+      <div class="loading">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p>Loading featured machines...</p>
+      </div>
+    </div>
+    <div class="view-all">
+      <a href="machines.html" class="btn-outline"><i class="fas fa-eye"></i> View All Machines</a>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-choose-us section-card bg-light">
+    <h2 class="section-title">Why Choose ABC Machinery?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-medal"></i>
+        </div>
+        <h3>Quality Assurance</h3>
+        <p>ISO 9001:2015 certified manufacturing with rigorous quality checks</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <h3>Expert Support</h3>
+        <p>24/7 technical support from experienced engineers</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shipping-fast"></i>
+        </div>
+        <h3>Quick Delivery</h3>
+        <p>Global shipping with customs clearance support</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3>Installation Services</h3>
+        <p>Professional installation and commissioning by certified technicians</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES WE SERVE -->
+  <section class="industries-section">
+    <h2 class="section-title">Industries We Serve</h2>
+    <div class="industries-grid">
+      <div class="industry-card">
+        <i class="fas fa-car"></i>
+        <h3>Automotive</h3>
+        <p>Precision machining for automotive components</p>
+      </div>
+      <div class="industry-card">
+        <i class="fas fa-plane"></i>
+        <h3>Aerospace</h3>
+        <p>High-precision equipment for aerospace manufacturing</p>
+      </div>
+      <div class="industry-card">
+        <i class="fas fa-prescription-bottle"></i>
+        <h3>Pharmaceutical</h3>
+        <p>Packaging and processing equipment</p>
+      </div>
+      <div class="industry-card">
+        <i class="fas fa-box"></i>
+        <h3>Packaging</h3>
+        <p>Automated packaging solutions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section-card">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial">
+        <div class="testimonial-content">
+          <p>"ABC Machinery provided us with excellent CNC machines and their after-sales service is outstanding. Highly recommended!"</p>
+        </div>
+        <div class="testimonial-author">
+          <strong>Rajesh Kumar</strong>
+          <span>Production Manager, Auto Parts Ltd.</span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-content">
+          <p>"Their technical team helped us set up the entire production line. Professional and reliable partners."</p>
+        </div>
+        <div class="testimonial-author">
+          <strong>Priya Sharma</strong>
+          <span>Director, Precision Tools Inc.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h3>Ready to Upgrade Your Manufacturing?</h3>
+      <p>Contact us today for a free consultation and quote</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn-primary"><i class="fas fa-phone-alt"></i> Contact Sales</a>
+        <a href="services.html" class="btn-outline"><i class="fas fa-clipboard-list"></i> View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (Shared across pages) -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <i class="fas fa-industry"></i>
+          <h3>ABC Manufacturing Machinery</h3>
+        </div>
+        <p>Leading provider of industrial machinery solutions with 25+ years of excellence.</p>
+        <div class="footer-certifications">
+          <span class="cert-badge">ISO 9001:2015</span>
+          <span class="cert-badge">CE Certified</span>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html"><i class="fas fa-chevron-right"></i> Home</a>
+        <a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a>
+        <a href="machines.html"><i class="fas fa-chevron-right"></i> Machines Catalog</a>
+        <a href="services.html"><i class="fas fa-chevron-right"></i> Our Services</a>
+        <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Industrial Area, Phase II, Mumbai</p>
+        <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@abcmachinery.com</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>Subscribe to our newsletter for updates</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email">
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 ABC Manufacturing Machinery Pvt. Ltd. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/api.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadFeaturedMachines();
+      updateMachineCount(24);
+    });
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machinery Catalog - ABC Manufacturing Machinery</title>
+  <meta name="description" content="Browse our complete catalog of industrial machinery including CNC machines, lathes, milling machines, grinding machines, and packaging equipment.">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+  <!-- HEADER SECTION (Same as other pages) -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="logo-area">
+          <a href="index.html" class="logo">
+            <i class="fas fa-industry"></i>
+            <span>ABC Machinery</span>
+          </a>
+        </div>
+        <div class="header-contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <span class="label">24/7 Support</span>
+              <span class="value">+91 98765 43210</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span class="label">Email Us</span>
+              <span class="value">info@abcmachinery.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span class="label">Head Office</span>
+              <span class="value">Mumbai, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="main-nav">
+    <div class="container">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html" class="nav-logo">
+            <i class="fas fa-industry"></i>
+            <span>ABC</span>
+          </a>
+        </div>
+        
+        <div class="nav-links" id="navLinks">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+          <a href="machines.html" class="active"><i class="fas fa-cogs"></i> Machines</a>
+          <a href="services.html"><i class="fas fa-tools"></i> Services</a>
+          <a href="contact.html"><i class="fas fa-address-book"></i> Contact</a>
+          <a href="quote.html" class="nav-cta"><i class="fas fa-file-invoice-dollar"></i> Get Quote</a>
+        </div>
+        
+        <div class="nav-actions">
+          <button class="search-btn" onclick="toggleSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search machines by name, model, or specifications...">
+          <button onclick="searchMachines()">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <h3>Menu</h3>
+      <button onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+      <a href="machines.html"><i class="fas fa-cogs"></i> Machines</a>
+      <a href="services.html"><i class="fas fa-tools"></i> Services</a>
+      <a href="contact.html"><i class="fas fa-address-book"></i> Contact</a>
+      <a href="quote.html" class="mobile-cta"><i class="fas fa-file-invoice-dollar"></i> Get Quote</a>
+    </div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1>Machinery Catalog</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Machines</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG HEADER -->
+  <section class="catalog-header">
+    <div class="container">
+      <div class="catalog-header-content">
+        <div class="catalog-title">
+          <h2>Industrial Machinery</h2>
+          <p>Browse our comprehensive range of high-quality industrial machines</p>
+        </div>
+        <div class="catalog-stats">
+          <div class="stat">
+            <span id="totalMachines">24</span>
+            <span>Total Models</span>
+          </div>
+          <div class="stat">
+            <span>8</span>
+            <span>Categories</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTERS SECTION -->
+  <section class="filters-section">
+    <div class="container">
+      <div class="filters-container">
+        <!-- Category Filter -->
+        <div class="category-filters">
+          <button class="category-btn active" data-category="all">All Machines</button>
+          <button class="category-btn" data-category="cnc">CNC Machines</button>
+          <button class="category-btn" data-category="turning">Turning</button>
+          <button class="category-btn" data-category="milling">Milling</button>
+          <button class="category-btn" data-category="grinding">Grinding</button>
+          <button class="category-btn" data-category="cutting">Cutting</button>
+          <button class="category-btn" data-category="packaging">Packaging</button>
+          <button class="category-btn" data-category="automation">Automation</button>
+        </div>
+        
+        <!-- Advanced Filters Toggle -->
+        <div class="advanced-filters-toggle">
+          <button class="btn-outline" onclick="toggleAdvancedFilters()">
+            <i class="fas fa-sliders-h"></i> Advanced Filters
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+        
+        <!-- Advanced Filters Panel -->
+        <div class="advanced-filters-panel" id="advancedFiltersPanel">
+          <div class="filter-row">
+            <div class="filter-group">
+              <label><i class="fas fa-indian-rupee-sign"></i> Price Range</label>
+              <div class="range-inputs">
+                <input type="number" id="minPrice" placeholder="Min" min="0">
+                <span>-</span>
+                <input type="number" id="maxPrice" placeholder="Max" min="0">
+              </div>
+            </div>
+            
+            <div class="filter-group">
+              <label><i class="fas fa-bolt"></i> Power Rating</label>
+              <select id="powerFilter">
+                <option value="">Any Power</option>
+                <option value="0-5">0-5 HP</option>
+                <option value="5-15">5-15 HP</option>
+                <option value="15-30">15-30 HP</option>
+                <option value="30+">30+ HP</option>
+              </select>
+            </div>
+            
+            <div class="filter-group">
+              <label><i class="fas fa-calendar"></i> Year</label>
+              <select id="yearFilter">
+                <option value="">Any Year</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="filter-actions">
+            <button class="btn-primary" onclick="applyFilters()">
+              <i class="fas fa-check"></i> Apply Filters
+            </button>
+            <button class="btn-outline" onclick="resetFilters()">
+              <i class="fas fa-redo-alt"></i> Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MACHINES GRID SECTION -->
+  <section class="machines-catalog">
+    <div class="container">
+      <div class="catalog-toolbar">
+        <div class="results-count">
+          <span id="resultsCount">24</span> machines found
+        </div>
+        
+        <div class="sort-options">
+          <label for="sortBy">Sort by:</label>
+          <select id="sortBy" onchange="sortMachines()">
+            <option value="featured">Featured</option>
+            <option value="name_asc">Name: A to Z</option>
+            <option value="name_desc">Name: Z to A</option>
+            <option value="price_asc">Price: Low to High</option>
+            <option value="price_desc">Price: High to Low</option>
+            <option value="year_desc">Newest First</option>
+          </select>
+        </div>
+        
+        <div class="view-options">
+          <button class="view-btn active" data-view="grid" onclick="setView('grid')">
+            <i class="fas fa-th"></i>
+          </button>
+          <button class="view-btn" data-view="list" onclick="setView('list')">
+            <i class="fas fa-list"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="machines-container" id="machinesContainer">
+        <!-- Machines will be loaded dynamically via JavaScript -->
+        <div class="loading-spinner">
+          <i class="fas fa-spinner fa-spin"></i>
+          <p>Loading machines...</p>
+        </div>
+      </div>
+      
+      <!-- Pagination -->
+      <div class="pagination" id="pagination">
+        <button class="page-prev disabled"><i class="fas fa-chevron-left"></i></button>
+        <div class="page-numbers">
+          <button class="page-number active">1</button>
+          <button class="page-number">2</button>
+          <button class="page-number">3</button>
+        </div>
+        <button class="page-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY SHOWCASE -->
+  <section class="category-showcase">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Shop by Category</span>
+        <h2 class="section-title">Machine Categories</h2>
+        <p class="section-description">Find the right machine for your specific application</p>
+      </div>
+      
+      <div class="category-grid">
+        <div class="category-card" onclick="filterByCategory('cnc')">
+          <div class="category-icon-wrapper">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>CNC Machines</h3>
+          <p>5-Axis, VMC, HMC, CNC Lathes</p>
+          <span class="machine-count">8 Models</span>
+        </div>
+        
+        <div class="category-card" onclick="filterByCategory('turning')">
+          <div class="category-icon-wrapper">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>Turning Machines</h3>
+          <p>CNC Lathes, Conventional Lathes</p>
+          <span class="machine-count">6 Models</span>
+        </div>
+        
+        <div class="category-card" onclick="filterByCategory('milling')">
+          <div class="category-icon-wrapper">
+            <i class="fas fa-cut"></i>
+          </div>
+          <h3>Milling Machines</h3>
+          <p>Vertical, Horizontal, Universal</p>
+          <span class="machine-count">5 Models</span>
+        </div>
+        
+        <div class="category-card" onclick="filterByCategory('grinding')">
+          <div class="category-icon-wrapper">
+            <i class="fas fa-circle-notch"></i>
+          </div>
+          <h3>Grinding Machines</h3>
+          <p>Surface, Cylindrical, Tool</p>
+          <span class="machine-count">4 Models</span>
+        </div>
+        
+        <div class="category-card" onclick="filterByCategory('cutting')">
+          <div class="category-icon-wrapper">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Cutting Machines</h3>
+          <p>Laser, Plasma, Waterjet</p>
+          <span class="machine-count">5 Models</span>
+        </div>
+        
+        <div class="category-card" onclick="filterByCategory('packaging')">
+          <div class="category-icon-wrapper">
+            <i class="fas fa-box"></i>
+          </div>
+          <h3>Packaging Machines</h3>
+          <p>Form-fill-seal, Wrapping</p>
+          <span class="machine-count">7 Models</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CATALOG CTA -->
+  <section class="download-catalog">
+    <div class="container">
+      <div class="download-card">
+        <div class="download-content">
+          <i class="fas fa-file-pdf fa-3x"></i>
+          <div>
+            <h3>Download Complete Catalog</h3>
+            <p>Get detailed specifications, technical drawings, and pricing for all machines in PDF format</p>
+          </div>
+        </div>
+        <button class="btn-primary" onclick="downloadCatalog()">
+          <i class="fas fa-download"></i> Download (25 MB)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEED HELP SECTION -->
+  <section class="need-help">
+    <div class="container">
+      <div class="help-card">
+        <div class="help-content">
+          <h3>Need Help Choosing the Right Machine?</h3>
+          <p>Our technical experts can help you select the perfect equipment for your specific application</p>
+        </div>
+        <div class="help-actions">
+          <a href="contact.html" class="btn-outline">
+            <i class="fas fa-phone-alt"></i> Contact Expert
+          </a>
+          <a href="quote.html" class="btn-primary">
+            <i class="fas fa-file-invoice"></i> Request Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENTLY VIEWED (will be populated by JS) -->
+  <section class="recently-viewed" id="recentlyViewedSection" style="display: none;">
+    <div class="container">
+      <h3>Recently Viewed</h3>
+      <div class="machines-grid-small" id="recentlyViewedGrid"></div>
+    </div>
+  </section>
+
+  <!-- INQUIRY MODAL -->
+  <div id="inquiryModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-file-invoice-dollar"></i> Request Machine Information</h3>
+        <button class="close-modal" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="machine-summary" id="modalMachineSummary"></div>
+        
+        <form id="inquiryForm">
+          <input type="hidden" id="inquiryMachineId">
+          <input type="hidden" id="inquiryMachineName">
+          
+          <div class="form-group">
+            <label for="inquiryName">Full Name *</label>
+            <input type="text" id="inquiryName" required>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="inquiryEmail">Email Address *</label>
+              <input type="email" id="inquiryEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="inquiryPhone">Phone Number *</label>
+              <input type="tel" id="inquiryPhone" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="inquiryCompany">Company Name</label>
+            <input type="text" id="inquiryCompany">
+          </div>
+          
+          <div class="form-group">
+            <label for="inquiryMessage">Message / Requirements</label>
+            <textarea id="inquiryMessage" rows="4" placeholder="Please tell us about your specific requirements, quantity, timeline, etc."></textarea>
+          </div>
+          
+          <div class="form-checkbox">
+            <input type="checkbox" id="inquiryConsent" checked>
+            <label for="inquiryConsent">I agree to be contacted by ABC Machinery regarding this inquiry</label>
+          </div>
+          
+          <div class="form-buttons">
+            <button type="submit" class="btn-primary btn-block">
+              <i class="fas fa-paper-plane"></i> Submit Inquiry
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER (Same as other pages) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <i class="fas fa-industry"></i>
+            <span>ABC Machinery</span>
+          </div>
+          <p>Premium industrial machinery solutions since 1995. ISO 9001:2015 certified.</p>
+          <div class="certification-badges">
+            <span class="badge">ISO 9001:2015</span>
+            <span class="badge">CE Certified</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="machines.html">Machinery</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#" onclick="filterByCategory('cnc')">CNC Machines</a></li>
+            <li><a href="#" onclick="filterByCategory('turning')">Turning Machines</a></li>
+            <li><a href="#" onclick="filterByCategory('milling')">Milling Machines</a></li>
+            <li><a href="#" onclick="filterByCategory('packaging')">Packaging Machines</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="fas fa-phone-alt"></i> +91 98765 43210</li>
+            <li><i class="fas fa-envelope"></i> info@abcmachinery.com</li>
+          </ul>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 ABC Manufacturing Machinery. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript Files -->
+  <script src="js/main.js"></script>
+  <script src="js/machines.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      loadMachines();
+      checkUrlParams();
+    });
+  </script>
+</body>
+</html>
