@@ -22,6 +22,92 @@
 <body>
   <!-- HEADER, NAVIGATION, MOBILE MENU (Same as other pages) -->
   
+  <!-- HEADER SECTION (Same as index.html) -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="logo-area">
+          <a href="index.html" class="logo">
+            <i class="fas fa-industry"></i>
+            <span>Shashank shetty Machinery</span>
+          </a>
+        </div>
+        <div class="header-contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <span class="label">24/7 Support</span>
+              <span class="value">+91 8660986232</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span class="label">Email Us</span>
+              <span class="value">Shashimachinery.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span class="label">Head Office</span>
+              <span class="value">Mumbai, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="main-nav">
+    <div class="container">
+      <div class="nav-container">
+        <div class="nav-brand">
+          </a>
+        </div>
+        
+        <div class="nav-links" id="navLinks">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <a href="about.html" class="active"><i class="fas fa-info-circle"></i> About</a>
+          <a href="machines.html"><i class="fas fa-cogs"></i> Machines</a>
+          <a href="services.html"><i class="fas fa-tools"></i> Services</a>
+          <a href="contact.html"><i class="fas fa-address-book"></i> Contact</a>
+          <a href="quote.html" class="nav-cta"><i class="fas fa-file-invoice-dollar"></i> Get Quote</a>
+        </div>
+        
+        <div class="nav-actions">
+          <button class="search-btn" onclick="toggleSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search machines...">
+          <button onclick="searchMachines()">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <button onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+    </div>
+
+
+
   <!-- PAGE HEADER -->
   <section class="page-header">
     <div class="container">
